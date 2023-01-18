@@ -16,13 +16,13 @@ public class TestChristmas extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
         Scene scene = new Scene(root,1024,576);
         
-//        mainStage = stage;
-//        mainStage.setScene(scene);
-//        mainStage.setTitle("Christmas Tree Decorator");
-//        mainStage.getIcons().add(new Image("res/img/icon.png"));
-//        mainStage.setResizable(false);
-//        mainStage.setMaximized(false);
-//        mainStage.show();
+        mainStage = stage;
+        mainStage.setScene(scene);
+        mainStage.setTitle("Christmas Tree Decorator");
+        mainStage.getIcons().add(new Image("res/img/icon.png"));
+        mainStage.setResizable(false);
+        mainStage.setMaximized(false);
+        mainStage.show();
         
         
     }
