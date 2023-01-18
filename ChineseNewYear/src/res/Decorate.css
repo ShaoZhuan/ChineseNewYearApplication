@@ -1,0 +1,33 @@
+#bg1{
+    -fx-background-image: url("img/bg1.jpg");
+    -fx-background-size: stretch;
+}
+
+#bg2{
+    -fx-background-image: url("img/bg2.jpg");
+    -fx-background-size: stretch;
+}
+
+#bg3{
+    -fx-background-image: url("img/bg3.jpg");
+    -fx-background-size: stretch;
+}
+
+#menubar{
+    -fx-background-color: #a8026f;
+}
+
+#b1,#b2,#b3,#b4,#b5,#b6
+{
+    -fx-background-radius: 15;
+    -fx-background-color: #db2d43;
+    -fx-text-fill: #fbd5af;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 16; 
+}
+
+#b1:pressed,#b2:pressed,#b3:pressed,#b4:pressed,#b5:pressed,#b6:pressed
+{
+    -fx-background-color: #e76838;
+    -fx-text-fill: #db2d43;
+}
