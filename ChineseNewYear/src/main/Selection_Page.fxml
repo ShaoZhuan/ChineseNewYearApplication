@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.2842809364548495" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Selection_PageController">
+<SplitPane dividerPositions="0.2842809364548495" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="800" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Selection_PageController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
@@ -23,9 +23,9 @@
             <Label layoutX="18.0" layoutY="210.0" prefHeight="17.0" prefWidth="120.0" text="Make it snow!" />
             <CheckBox fx:id="snow" layoutX="21.0" layoutY="237.0" mnemonicParsing="false" onAction="#wantSnow" text="YESH PLEASE" />
          </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0">
          <children>
-            <AnchorPane id="bg1" fx:id="prev" prefHeight="358.0" prefWidth="405.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <AnchorPane id="bg1" fx:id="prev" prefHeight="358.0" prefWidth="600" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <children>
                   <ImageView fx:id="pokok" fitHeight="249.0" fitWidth="200.0" layoutX="103.0" layoutY="100.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
                      <image>
