@@ -29,8 +29,8 @@ public class Index {
                 "res/img/ribbon1.png",
                 "res/img/ornament1.png",
                 "res/img/gift1.png",
-                "res/img/reindeer.jpg",
-                "res/img/reindeer_walking.gif"
+                "res/img/firecracker_idle.png",
+                "res/img/firecracker.gif"
                 ),
         PRESET2(
                 "res/img/star.png",
