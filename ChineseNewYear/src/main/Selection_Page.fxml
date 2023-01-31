@@ -29,7 +29,7 @@
          <children>
             <AnchorPane id="bg1" fx:id="prev" prefHeight="358.0" prefWidth="600" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" style="-fx-background-size: stretch;">
                <children>
-                  <ImageView fx:id="lion" fitHeight="249.0" fitWidth="200.0" layoutX="174.0" layoutY="109.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
+                  <ImageView fx:id="singa" fitHeight="249.0" fitWidth="200.0" layoutX="174.0" layoutY="109.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
                      <image>
                         <Image url="@../res/img/lion1.png" />
                      </image>

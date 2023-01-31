@@ -49,7 +49,7 @@ public class Main_PageController implements Initializable {
     @FXML
     private Button b1, b2, b3, b4, b5, b6;
     @FXML
-    private ImageView pokok, tongkat, ribbon, ornament, olaf, gift, star;
+    private ImageView singa, tongkat, ribbon, ornament, olaf, gift, star;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
@@ -60,7 +60,7 @@ public class Main_PageController implements Initializable {
     private PRESET preset = PRESET.PRESET1;
 
     private LightAnimation lightAnimation;
-    private NewYearCreator background, tree;
+    private NewYearCreator background, lion;
     private Avatar reindeer, santa, snowman;
     private boolean standing;
     private AchievementSystem manager;
@@ -133,11 +133,12 @@ public class Main_PageController implements Initializable {
             case "factory":
                 setNewWindow();
                 NewYearProduct gambarBG = background.orderDesign(Setter.getId());
-                NewYearProduct gambarTR = tree.orderDesign(Setter.getLion().toString());
+                NewYearProduct gambarLION = lion.orderDesign(Setter.getLion().toString());
                 gambarBG.setImage(bg);
-                gambarTR.setImage(pokok);
+                gambarLION.setImage(singa);
                 tmp.clearPreset();
                 break;
+
             case "close":
                 Platform.exit();
                 break;
@@ -207,7 +208,7 @@ public class Main_PageController implements Initializable {
 
     private void initFactory() {
         background = new BackgroundCreator();
-        tree = new LionCreator();
+        lion = new LionCreator();
     }
 
     private void initAchievement() {
