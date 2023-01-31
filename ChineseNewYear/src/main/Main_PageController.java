@@ -40,6 +40,7 @@ import javafx.stage.Stage;
 
 import res.Index.*;
 import State.LightAnimation;
+import State.LightBlink2State;
 import Template.Template;
 
 public class Main_PageController implements Initializable {
@@ -82,8 +83,7 @@ public class Main_PageController implements Initializable {
             case "b1":
                 preset = PRESET.PRESET1;
                 tmp.setPresetImage(preset);
-                standing = true;
-                manager.getAchievement("Achievement1").unlock();
+                standing = true;                
                 break;
             case "b2":
                 preset = PRESET.PRESET2;
@@ -107,22 +107,29 @@ public class Main_PageController implements Initializable {
             default:
             //throw new AssertionError();
         }
+        checkAchievements();
     }
 
     private void chooseStrategy() {
+        standing = !standing;
         switch (preset) {
             case PRESET1:
-                reindeer.performMove(standing);
+                reindeer.toggle(standing);
+                reindeer.setImg();
+                reindeer.performMove();
                 break;
             case PRESET2:
-                santa.performMove(standing);
+                santa.toggle(standing);
+                santa.setImg();
+                santa.performMove();
                 break;
             case PRESET3:
-                snowman.performMove(standing);
+                snowman.toggle(standing);
+                snowman.setImg();
+                snowman.performMove();
             default:
         }
 
-        standing = !standing;
     }
 
     @FXML
@@ -213,10 +220,12 @@ public class Main_PageController implements Initializable {
 
     private void initAchievement() {
         manager = AchievementSystem.getInstance();
-
+        
         //create list of achievement
-        Achievement achievement1 = new Achievement("Achievement1", "Description for Achievement 1");
-        Achievement achievement2 = new Achievement("Achievement2", "Description for Achievement 2");
+        Achievement achievement1 = new Achievement("Achievement1", "You got the light blink twice and rabbit running");
+        Achievement achievement2 = new Achievement("Achievement2", "You got the fire crackers on!!!");
+        Achievement achievement3 = new Achievement("Achievement3", "恭喜发财！！");
+        
         
         manager.addAchievement(achievement1);
         manager.addAchievement(achievement2);
@@ -224,6 +233,19 @@ public class Main_PageController implements Initializable {
         PopupController popup = new PopupController();
         manager.registerObserver(popup);
                 
+    }
+    
+    private void checkAchievements(){
+        if(preset==PRESET.PRESET3 && !standing && lightAnimation.currentState() instanceof LightBlink2State){
+            manager.getAchievement("Achievement1").unlock();
+        }
+        if(preset==PRESET.PRESET1 && !standing){
+            manager.getAchievement("Achievement2").unlock();
+        }
+        if(preset==PRESET.PRESET2 && !standing){
+            manager.getAchievement("Achievement3").unlock();
+        } 
+        
     }
 
 }
