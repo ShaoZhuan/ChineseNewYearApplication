@@ -24,53 +24,32 @@ public class Index {
     
     public enum PRESET {
         PRESET1(
-                "res/img/star.png",
-                "res/img/tongkat1.png",
-                "res/img/ribbon1.png",
-                "res/img/ornament1.png",
-                "res/img/gift1.png",
+                "res/img/person1.png",
                 "res/img/firecracker_idle.png",
                 "res/img/firecracker.gif"
                 ),
         PRESET2(
-                "res/img/star.png",
-                "res/img/tongkat2.png",
-                "res/img/ribbon2.png",
-                "res/img/ornament2.png",
-                "res/img/gift2.png",
+                "res/img/person2.png",
                 "res/img/hcny_idle.png",
                 "res/img/hcny.gif"
                 ),
         PRESET3(
-                "res/img/star.png",
-                "res/img/tongkat3.png",
-                "res/img/ribbon3.png",
-                "res/img/ornament3.png",
-                "res/img/gift3.png",
+                "res/img/person3.png",
                 "res/img/rabbit_idle.png",
                 "res/img/rabbit.gif"
                 );
         
-        private final Image starImage, tongkatImage, ribbonImage, ornamentImage, 
-                giftImage, standImage, walkImage;
+        private final Image personImage, standImage, walkImage;
         private ArrayList<Image> imageArray = new ArrayList<>();
         private final Color color;
-        private PRESET(String starPath, String tongkatPath, String ribbonPath, 
-                String ornamentPath, String giftPath, String standPath, 
+        private PRESET( String personPath, String standPath, 
                 String walkPath) {
-                starImage = new Image(starPath);
-                tongkatImage = new Image(tongkatPath);
-                ribbonImage = new Image(ribbonPath);
-                ornamentImage = new Image(ornamentPath);
-                giftImage = new Image(giftPath);
+                
+                personImage = new Image(personPath);
                 standImage = new Image(standPath);
                 walkImage = new Image(walkPath);
                 
-                imageArray.add(starImage);
-                imageArray.add(tongkatImage);
-                imageArray.add(ribbonImage);
-                imageArray.add(ornamentImage);
-                imageArray.add(giftImage);
+                imageArray.add(personImage);
                 imageArray.add(standImage);
                 imageArray.add(walkImage);
                 
