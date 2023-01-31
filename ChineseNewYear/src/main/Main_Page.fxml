@@ -28,7 +28,7 @@
                   <Image url="@../res/img/lion-dance.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="person" fitHeight="130.0" layoutX="249.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
+            <ImageView fx:id="person" fitHeight="300.0" layoutX="500.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
             <ImageView fx:id="olaf" fitHeight="269.0" fitWidth="270.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Circle fx:id="circle1" fill="#fafafa00" layoutX="361.0" layoutY="319.0" radius="5.0" stroke="#ffffff00" strokeType="INSIDE" />
             <Circle fx:id="circle2" fill="#ffffff00" layoutX="371.0" layoutY="261.0" radius="5.0" stroke="#ffffff00" strokeType="INSIDE" />
