@@ -5,7 +5,18 @@
  */
 package main;
 
-
+import Factory.Setter;
+import Factory.ChristmasCreator;
+import Factory.PokokCreator;
+import Factory.ChristmasProduct;
+import Factory.BackgroundCreator;
+import SingletonObserver.Achievement;
+import SingletonObserver.AchievementSystem;
+import SingletonObserver.PopupController;
+import Strategy.Santa;
+import Strategy.Reindeer;
+import Strategy.Snowman;
+import Strategy.Avatar;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -28,11 +39,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import res.Index.*;
-import dpState.LightAnimation;
-import dpfactory.*;
-import dpFacaTon.Sound;
-import dptemplate.Template;
-import dpStrategy.*;
+import State.LightAnimation;
+import Template.Template;
 
 public class Main_PageController implements Initializable {
 
@@ -47,27 +55,23 @@ public class Main_PageController implements Initializable {
     @FXML
     private MenuItem factory, fmusic, fskip, close;
 
-    //Adib
     private Template tmp;
     private ArrayList<ImageView> templateImage;
-    private PRESET preset=PRESET.PRESET1;
-    //Ratu
-    private Sound sound;
-    //Afiqah
+    private PRESET preset = PRESET.PRESET1;
+
     private LightAnimation lightAnimation;
-    //Ameer
     private ChristmasCreator background, tree;
-    //Chempaka
     private Avatar reindeer, santa, snowman;
     private boolean standing;
+    private AchievementSystem manager;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) {          
         initTemplate();
         initState();
         initStrategy();
-        initFacaTon();
         initFactory();
+        initAchievement();
     }
 
     @FXML
@@ -78,17 +82,18 @@ public class Main_PageController implements Initializable {
             case "b1":
                 preset = PRESET.PRESET1;
                 tmp.setPresetImage(preset);
-                standing=true;
+                standing = true;
+                manager.getAchievement("Achievement 1").unlock();
                 break;
             case "b2":
                 preset = PRESET.PRESET2;
                 tmp.setPresetImage(preset);
-                standing=true;
+                standing = true;
                 break;
             case "b3":
                 preset = PRESET.PRESET3;
                 tmp.setPresetImage(preset);
-                standing=true;
+                standing = true;
                 break;
             case "b4":
                 lightAnimation.clickButton();
@@ -103,6 +108,7 @@ public class Main_PageController implements Initializable {
             //throw new AssertionError();
         }
     }
+
     private void chooseStrategy() {
         switch (preset) {
             case PRESET1:
@@ -115,7 +121,7 @@ public class Main_PageController implements Initializable {
                 snowman.performMove(standing);
             default:
         }
-        
+
         standing = !standing;
     }
 
@@ -136,12 +142,6 @@ public class Main_PageController implements Initializable {
             case "close":
                 Platform.exit();
                 break;
-            case "fmusic":
-                sound.trackSong(fmusic);
-                break;
-            case "fskip":
-                sound.nextSong();
-                break;
             default:
 
         }
@@ -149,9 +149,9 @@ public class Main_PageController implements Initializable {
 
     private void setNewWindow() throws IOException {
         Stage stage = new Stage();
-        
+
         Parent root = FXMLLoader.load(getClass().getResource("Selection_Page.fxml"));
-        
+
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.setResizable(false);
@@ -170,11 +170,11 @@ public class Main_PageController implements Initializable {
         templateImage.add(ornament);
         templateImage.add(gift);
         templateImage.add(olaf);
-        
+
         //bind visibility of the button
         b4.visibleProperty().bind(b6.visibleProperty());
         b5.visibleProperty().bind(b6.visibleProperty());
-        
+
         tmp = new Template(templateImage, circle1, b6);
         //Hide all first
         tmp.clearPreset();
@@ -206,15 +206,24 @@ public class Main_PageController implements Initializable {
         snowman = new Snowman(olaf);
     }
 
-    private void initFacaTon() {
-        sound = Sound.getInstance();
-    }
-
     private void initFactory() {
         background = new BackgroundCreator();
         tree = new PokokCreator();
     }
 
-    
+    private void initAchievement() {
+        manager = AchievementSystem.getInstance();
+
+        //create list of achievement
+        Achievement achievement1 = new Achievement("Achievement 1", "Description for Achievement 1");
+        Achievement achievement2 = new Achievement("Achievement 2", "Description for Achievement 2");
+        
+        manager.addAchievement(achievement1);
+        manager.addAchievement(achievement2);
+        
+        PopupController popup = new PopupController();
+        manager.registerObserver(popup);
+                
+    }
 
 }

@@ -1,16 +1,16 @@
 #bg1{
-    -fx-background-image: url("img/bg1.jpg");
-    -fx-background-size: stretch;
+    -fx-background-image: url("img/bg1.png");
+    -fx-background-size: cover;
 }
 
 #bg2{
     -fx-background-image: url("img/bg2.jpg");
-    -fx-background-size: stretch;
+    -fx-background-size: cover;
 }
 
 #bg3{
     -fx-background-image: url("img/bg3.jpg");
-    -fx-background-size: stretch;
+    -fx-background-size: cover;
 }
 
 #menubar{
@@ -20,8 +20,7 @@
 #b1,#b2,#b3,#b4,#b5,#b6
 {
     -fx-background-radius: 15;
-    -fx-background-color: #db2d43;
-    -fx-text-fill: #fbd5af;
+    -fx-background-color: #FFD84B;
     -fx-font-type: 'sans-serif';
     -fx-font-size: 16; 
 }

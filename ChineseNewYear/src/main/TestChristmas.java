@@ -14,12 +14,11 @@ public class TestChristmas extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
-        Scene scene = new Scene(root,1024,576);
+        Scene scene = new Scene(root,1026,600);
         
         mainStage = stage;
         mainStage.setScene(scene);
-        mainStage.setTitle("Christmas Tree Decorator");
-        mainStage.getIcons().add(new Image("res/img/icon.png"));
+        mainStage.setTitle("Chinese New Year Decorator");
         mainStage.setResizable(false);
         mainStage.setMaximized(false);
         mainStage.show();

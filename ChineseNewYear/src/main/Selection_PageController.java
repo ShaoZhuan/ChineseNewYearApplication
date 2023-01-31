@@ -11,7 +11,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import res.Index.*;
-import dpfactory.Setter;
+import Factory.Setter;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
