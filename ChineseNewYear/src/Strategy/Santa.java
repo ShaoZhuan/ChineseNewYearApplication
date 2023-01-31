@@ -4,25 +4,20 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import res.Index.*;
 
-public class Santa implements Avatar {
-    private final ImageView iv;
-    private final Image stand = PRESET.PRESET2.getImage(5);
-    private final Image walk = PRESET.PRESET2.getImage(6);
-    MoveBehaviour walking, standing;    
+public class Santa extends Avatar {
     
-    public Santa(ImageView iv){
-            this.iv = iv;
-        walking = new CanWalk();
-        standing = new NoWalk();
-        }
-
+    public Santa(ImageView iv) {
+        this.iv = iv;
+        
+    }
+    
     @Override
-    public void performMove(boolean isStanding) {
-        if(isStanding){
-            walking.move(iv, walk);
+    public void setImg(){
+        if(moveBehavior instanceof NoWalk){
+            this.img = PRESET.PRESET2.getImage(5);
         }
         else{
-            standing.move(iv, stand);
+            this.img = PRESET.PRESET2.getImage(6);            
         }
     }
         

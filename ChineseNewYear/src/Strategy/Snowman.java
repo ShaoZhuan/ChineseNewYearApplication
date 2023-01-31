@@ -7,27 +7,22 @@ package Strategy;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import res.Index;
+import res.Index.*;
 
-public class Snowman implements Avatar{
+
+public class Snowman extends Avatar{
     
-    private final ImageView iv;
-    private final Image stand = Index.PRESET.PRESET3.getImage(5);
-    private final Image walk = Index.PRESET.PRESET3.getImage(6);
-    MoveBehaviour walking, standing;
-    public Snowman(ImageView iv){
+    public Snowman(ImageView iv) {
         this.iv = iv;
-        walking = new CanWalk();
-        standing = new NoWalk();
-        }
-
+    }
+    
     @Override
-    public void performMove(boolean standing) {
-        if(standing){
-            walking.move(iv, walk);
+    public void setImg(){
+        if(moveBehavior instanceof NoWalk){
+            this.img = PRESET.PRESET3.getImage(5);
         }
         else{
-            walking.move(iv, stand);
+            this.img = PRESET.PRESET3.getImage(6);            
         }
     }
         
