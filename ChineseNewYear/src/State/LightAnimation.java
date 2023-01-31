@@ -8,10 +8,6 @@ package State;
 import javafx.animation.FillTransition;
 import javafx.scene.shape.Circle;
 
-/**
- *
- * @author FiQa
- */
 public class LightAnimation {
     
     private State lightOn;
@@ -55,5 +51,9 @@ public class LightAnimation {
     }
     public void clickButton(){
         state.clickButton();
+    }
+    
+    public State currentState(){
+        return state;
     }
 }
