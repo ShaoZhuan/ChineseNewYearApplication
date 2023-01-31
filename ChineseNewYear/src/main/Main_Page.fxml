@@ -23,7 +23,7 @@
       </MenuBar>      
       <AnchorPane id="bg1" fx:id="bg" layoutY="25.0" prefHeight="500" prefWidth="1026">      
          <children>
-            <ImageView fx:id="pokok" fitHeight="303" fitWidth="400" layoutX="313" layoutY="197" pickOnBounds="true" >
+            <ImageView fx:id="singa" fitHeight="303" fitWidth="400" layoutX="313" layoutY="197" pickOnBounds="true" >
                <image>
                   <Image url="@../res/img/lion-dance.png" />
                </image>

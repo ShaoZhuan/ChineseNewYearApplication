@@ -24,7 +24,7 @@ public class Selection_PageController implements Initializable {
     @FXML
     private AnchorPane prev;
     @FXML
-    private ImageView pokok;
+    private ImageView singa;
     
     private LION lion=LION.LION1;
 
@@ -68,11 +68,13 @@ public class Selection_PageController implements Initializable {
         switch (src) {
             case "rtr1":
                 lion = LION.LION1;
-                pokok.setImage(lion.getLionImage());
+                singa.setImage(lion.getLionImage());
                 break;
             case "rtr2":
                 lion = LION.LION2;
-                pokok.setImage(lion.getLionImage());
+                System.out.println(LION.LION2);
+                System.out.println(lion);
+                singa.setImage(lion.getLionImage());
                 break;
             default:
                 break;
