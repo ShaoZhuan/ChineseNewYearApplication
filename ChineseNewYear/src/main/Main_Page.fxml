@@ -15,7 +15,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem id="factory" fx:id="factory" mnemonicParsing="false" onAction="#setMenu" text="New Christmas Tree" />
+                  <MenuItem id="factory" fx:id="factory" mnemonicParsing="false" onAction="#setMenu" text="New Background or Lion" />
               <MenuItem id="close" fx:id="close" mnemonicParsing="false" onAction="#setMenu" text="Close" />
             </items>
           </Menu>
