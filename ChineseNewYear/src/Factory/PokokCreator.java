@@ -3,7 +3,7 @@ package Factory;
 import javafx.scene.image.Image;
 import res.Index.*;
 
-public class PokokCreator extends ChristmasCreator {
+public class PokokCreator extends NewYearCreator {
     
     @Override
     ChristmasProduct createDesign(String tree) {

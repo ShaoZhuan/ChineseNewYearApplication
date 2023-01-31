@@ -6,7 +6,7 @@
 package main;
 
 import Factory.Setter;
-import Factory.ChristmasCreator;
+import Factory.NewYearCreator;
 import Factory.PokokCreator;
 import Factory.ChristmasProduct;
 import Factory.BackgroundCreator;
@@ -60,7 +60,7 @@ public class Main_PageController implements Initializable {
     private PRESET preset = PRESET.PRESET1;
 
     private LightAnimation lightAnimation;
-    private ChristmasCreator background, tree;
+    private NewYearCreator background, tree;
     private Avatar reindeer, santa, snowman;
     private boolean standing;
     private AchievementSystem manager;
@@ -152,7 +152,7 @@ public class Main_PageController implements Initializable {
 
         Parent root = FXMLLoader.load(getClass().getResource("Selection_Page.fxml"));
 
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 800, 468);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setMaximized(false);

@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class TestChristmas extends Application {
+public class ChineseNewYearApp extends Application {
 
     Stage mainStage;
     
