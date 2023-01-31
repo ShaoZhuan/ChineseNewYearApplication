@@ -49,7 +49,7 @@ public class Main_PageController implements Initializable {
     @FXML
     private Button b1, b2, b3, b4, b5, b6;
     @FXML
-    private ImageView singa, olaf, person;
+    private ImageView singa, tongkat, ribbon, ornament, olaf, gift, star;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
@@ -164,7 +164,11 @@ public class Main_PageController implements Initializable {
     private void initTemplate() {
         //Add element/component of the imageView into the array
         templateImage = new ArrayList<>();
-        templateImage.add(person);
+        templateImage.add(star);
+        templateImage.add(tongkat);
+        templateImage.add(ribbon);
+        templateImage.add(ornament);
+        templateImage.add(gift);
         templateImage.add(olaf);
 
         //bind visibility of the button
