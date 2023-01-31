@@ -38,8 +38,8 @@ public class Index {
                 "res/img/ribbon2.png",
                 "res/img/ornament2.png",
                 "res/img/gift2.png",
-                "res/img/santa.png",
-                "res/img/santa_walk.gif"
+                "res/img/hcny_idle.png",
+                "res/img/hcny.gif"
                 ),
         PRESET3(
                 "res/img/star.png",
