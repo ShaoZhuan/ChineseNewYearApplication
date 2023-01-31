@@ -83,7 +83,7 @@ public class Main_PageController implements Initializable {
                 preset = PRESET.PRESET1;
                 tmp.setPresetImage(preset);
                 standing = true;
-                manager.getAchievement("Achievement 1").unlock();
+                manager.getAchievement("Achievement1").unlock();
                 break;
             case "b2":
                 preset = PRESET.PRESET2;
@@ -135,7 +135,6 @@ public class Main_PageController implements Initializable {
                 ChristmasProduct gambarBG = background.orderDesign(Setter.getId());
                 ChristmasProduct gambarTR = tree.orderDesign(Setter.getTree().toString());
                 gambarBG.setImage(bg);
-                gambarBG.setSnow(bg);
                 gambarTR.setImage(pokok);
                 tmp.clearPreset();
                 break;
@@ -152,12 +151,12 @@ public class Main_PageController implements Initializable {
 
         Parent root = FXMLLoader.load(getClass().getResource("Selection_Page.fxml"));
 
-        Scene scene = new Scene(root, 800, 468);
+        Scene scene = new Scene(root, 800, 400);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setMaximized(false);
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("New Christmas Tree");
+        stage.setTitle("New Chinese New Year Location");
         stage.showAndWait();
     }
 
@@ -215,8 +214,8 @@ public class Main_PageController implements Initializable {
         manager = AchievementSystem.getInstance();
 
         //create list of achievement
-        Achievement achievement1 = new Achievement("Achievement 1", "Description for Achievement 1");
-        Achievement achievement2 = new Achievement("Achievement 2", "Description for Achievement 2");
+        Achievement achievement1 = new Achievement("Achievement1", "Description for Achievement 1");
+        Achievement achievement2 = new Achievement("Achievement2", "Description for Achievement 2");
         
         manager.addAchievement(achievement1);
         manager.addAchievement(achievement2);
