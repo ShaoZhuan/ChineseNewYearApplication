@@ -7,8 +7,8 @@ package main;
 
 import Factory.Setter;
 import Factory.NewYearCreator;
-import Factory.PokokCreator;
-import Factory.ChristmasProduct;
+import Factory.LionCreator;
+import Factory.NewYearProduct;
 import Factory.BackgroundCreator;
 import SingletonObserver.Achievement;
 import SingletonObserver.AchievementSystem;
@@ -132,8 +132,8 @@ public class Main_PageController implements Initializable {
         switch (source) {
             case "factory":
                 setNewWindow();
-                ChristmasProduct gambarBG = background.orderDesign(Setter.getId());
-                ChristmasProduct gambarTR = tree.orderDesign(Setter.getTree().toString());
+                NewYearProduct gambarBG = background.orderDesign(Setter.getId());
+                NewYearProduct gambarTR = tree.orderDesign(Setter.getLion().toString());
                 gambarBG.setImage(bg);
                 gambarTR.setImage(pokok);
                 tmp.clearPreset();
@@ -207,7 +207,7 @@ public class Main_PageController implements Initializable {
 
     private void initFactory() {
         background = new BackgroundCreator();
-        tree = new PokokCreator();
+        tree = new LionCreator();
     }
 
     private void initAchievement() {

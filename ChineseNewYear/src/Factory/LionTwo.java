@@ -6,15 +6,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import res.Index.*;
 
-public class PokokOne extends ChristmasProduct{
-    private TREE tree;
-    public PokokOne(TREE tree){
-        this.tree = tree;
+public class LionTwo extends NewYearProduct{
+    private LION lion;
+    public LionTwo(LION lion){
+        this.lion = lion;
     }
     
     @Override
     public void setImage(Node pane) {
         ImageView iv = (ImageView) pane;
-        iv.setImage(tree.getTreeImage());
+        iv.setImage(lion.getLionImage());
     }
 }

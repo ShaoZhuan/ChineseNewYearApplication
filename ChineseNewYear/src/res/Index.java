@@ -7,18 +7,18 @@ import javafx.scene.paint.Paint;
 
 public class Index {
     
-    public enum TREE {
-        TREE1("res/img/lion1.png"),
-        TREE2("res/img/lion2.png");
+    public enum LION {
+        LION1("res/img/lion1.png"),
+        LION2("res/img/lion2.png");
         
-        private final Image treeImage;
+        private final Image lionImage;
 
-        private TREE(String treePath) {
-            treeImage = new Image(treePath);
+        private LION(String lionPath) {
+            lionImage = new Image(lionPath);
         }
         
-        public Image getTreeImage() {
-            return treeImage;
+        public Image getLionImage() {
+            return lionImage;
         }
     }
     

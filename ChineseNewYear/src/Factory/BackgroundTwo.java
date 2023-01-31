@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import res.Index.*;
-public class BackgroundTwo extends ChristmasProduct{
+public class BackgroundTwo extends NewYearProduct{
     private String id;
     public BackgroundTwo(String id){
         this.id = id;

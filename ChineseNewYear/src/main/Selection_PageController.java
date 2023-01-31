@@ -26,7 +26,7 @@ public class Selection_PageController implements Initializable {
     @FXML
     private ImageView pokok;
     
-    private TREE tree=TREE.TREE1;
+    private LION lion=LION.LION1;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -67,12 +67,12 @@ public class Selection_PageController implements Initializable {
         String src = rb.getId();
         switch (src) {
             case "rtr1":
-                tree = TREE.TREE1;
-                pokok.setImage(tree.getTreeImage());
+                lion = LION.LION1;
+                pokok.setImage(lion.getLionImage());
                 break;
             case "rtr2":
-                tree = TREE.TREE2;
-                pokok.setImage(tree.getTreeImage());
+                lion = LION.LION2;
+                pokok.setImage(lion.getLionImage());
                 break;
             default:
                 break;
@@ -84,7 +84,7 @@ public class Selection_PageController implements Initializable {
     @FXML
     private void onClick(ActionEvent event) {
         Setter.setId(prev.getId());
-        Setter.setTree(tree);
+        Setter.setLion(lion);
         
         Button btn = (Button) event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();

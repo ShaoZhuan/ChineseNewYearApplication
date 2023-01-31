@@ -31,7 +31,7 @@
                <children>
                   <ImageView fx:id="pokok" fitHeight="249.0" fitWidth="200.0" layoutX="174.0" layoutY="109.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
                      <image>
-                        <Image url="@../res/img/tree1.png" />
+                        <Image url="@../res/img/lion1.png" />
                      </image>
                   </ImageView>
                </children></AnchorPane>

@@ -5,8 +5,8 @@ import res.Index.*;
 public class BackgroundCreator extends NewYearCreator {
 
     @Override
-    ChristmasProduct createDesign(String id){
-        ChristmasProduct pr;
+    NewYearProduct createDesign(String id){
+        NewYearProduct pr;
         switch (id) {
             case "bg1":
                 return new BackgroundOne(id);
