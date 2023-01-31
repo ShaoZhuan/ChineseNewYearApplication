@@ -22,14 +22,14 @@
             <RadioButton id="rbg2" fx:id="rbg2" layoutX="18.0" layoutY="65.0" mnemonicParsing="false" onAction="#changeBG" text="Background 2" />
             <RadioButton id="rbg3" fx:id="rbg3" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" onAction="#changeBG" text="Background 3" />
             <Label layoutX="18.0" layoutY="124.0" prefHeight="17.0" prefWidth="96.0" text="Christmas Tree" />
-            <RadioButton id="rtr1" fx:id="rtr1" layoutX="18.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeTr" text="Tree 1" />
-            <RadioButton id="rtr2" fx:id="rtr2" layoutX="18.0" layoutY="176.0" mnemonicParsing="false" onAction="#changeTr" text="Tree 2" />
+            <RadioButton id="rtr1" fx:id="rtr1" layoutX="18.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeTr" text="Lion 1" />
+            <RadioButton id="rtr2" fx:id="rtr2" layoutX="18.0" layoutY="176.0" mnemonicParsing="false" onAction="#changeTr" text="Lion 2" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0">
          <children>
             <AnchorPane id="bg1" fx:id="prev" prefHeight="358.0" prefWidth="600" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" style="-fx-background-size: stretch;">
                <children>
-                  <ImageView fx:id="pokok" fitHeight="249.0" fitWidth="200.0" layoutX="174.0" layoutY="109.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
+                  <ImageView fx:id="lion" fitHeight="249.0" fitWidth="200.0" layoutX="174.0" layoutY="109.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
                      <image>
                         <Image url="@../res/img/lion1.png" />
                      </image>
