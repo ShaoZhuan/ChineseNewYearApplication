@@ -8,8 +8,8 @@ import javafx.scene.paint.Paint;
 public class Index {
     
     public enum TREE {
-        TREE1("res/img/tree1.png"),
-        TREE2("res/img/tree2.png");
+        TREE1("res/img/lion1.png"),
+        TREE2("res/img/lion2.png");
         
         private final Image treeImage;
 
