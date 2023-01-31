@@ -25,11 +25,8 @@ public class Selection_PageController implements Initializable {
     private AnchorPane prev;
     @FXML
     private ImageView pokok;
-    @FXML
-    private CheckBox snow;
     
     private TREE tree=TREE.TREE1;
-    private boolean snowing=false;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -78,7 +75,6 @@ public class Selection_PageController implements Initializable {
                 pokok.setImage(tree.getTreeImage());
                 break;
             default:
-                
                 break;
                 
         }
@@ -86,15 +82,8 @@ public class Selection_PageController implements Initializable {
     }
 
     @FXML
-    private void wantSnow(ActionEvent event) {
-        if(snow.isSelected()) snowing = true;
-        else snowing=false;
-    }
-
-    @FXML
     private void onClick(ActionEvent event) {
         Setter.setId(prev.getId());
-        Setter.setSnow(snowing);
         Setter.setTree(tree);
         
         Button btn = (Button) event.getSource();

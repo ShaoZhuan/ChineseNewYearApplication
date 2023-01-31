@@ -3,7 +3,7 @@ package Factory;
 import res.Index.*;
 
 public class BackgroundCreator extends NewYearCreator {
-    private boolean isSnowing;
+
     @Override
     ChristmasProduct createDesign(String id){
         ChristmasProduct pr;
