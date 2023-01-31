@@ -47,8 +47,8 @@ public class Index {
                 "res/img/ribbon3.png",
                 "res/img/ornament3.png",
                 "res/img/gift3.png",
-                "res/img/snowman.png",
-                "res/img/snowman.png"
+                "res/img/rabbit_idle.png",
+                "res/img/rabbit.gif"
                 );
         
         private final Image starImage, tongkatImage, ribbonImage, ornamentImage, 
