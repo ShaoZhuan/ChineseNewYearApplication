@@ -50,7 +50,7 @@ public class Main_PageController implements Initializable {
     @FXML
     private Button b1, b2, b3, b4, b5, b6;
     @FXML
-    private ImageView singa, olaf, person;
+    private ImageView singa, olaf, person, olaf_copy;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
@@ -62,7 +62,7 @@ public class Main_PageController implements Initializable {
 
     private LightAnimation lightAnimation;
     private NewYearCreator background, lion;
-    private Avatar reindeer, santa, snowman;
+    private Avatar reindeer, santa, snowman, reindeer1, santa1, snowman1;
     private boolean standing;
     private AchievementSystem manager;
 
@@ -117,16 +117,25 @@ public class Main_PageController implements Initializable {
                 reindeer.toggle(standing);
                 reindeer.setImg();
                 reindeer.performMove();
+                reindeer1.toggle(standing);
+                reindeer1.setImg();
+                reindeer1.performMove();
                 break;
             case PRESET2:
                 santa.toggle(standing);
                 santa.setImg();
                 santa.performMove();
+                santa1.toggle(standing);
+                santa1.setImg();
+                santa1.performMove();
                 break;
             case PRESET3:
                 snowman.toggle(standing);
                 snowman.setImg();
                 snowman.performMove();
+                snowman1.toggle(standing);
+                snowman1.setImg();
+                snowman1.performMove();
             default:
         }
 
@@ -173,6 +182,7 @@ public class Main_PageController implements Initializable {
         templateImage = new ArrayList<>();
         templateImage.add(person);
         templateImage.add(olaf);
+        templateImage.add(olaf_copy);
 
         //bind visibility of the button
         b4.visibleProperty().bind(b6.visibleProperty());
@@ -207,6 +217,9 @@ public class Main_PageController implements Initializable {
         reindeer = new Reindeer(olaf);
         santa = new Santa(olaf);
         snowman = new Snowman(olaf);
+        reindeer1 = new Reindeer(olaf_copy);
+        santa1 = new Santa(olaf_copy);
+        snowman1 = new Snowman(olaf_copy);
     }
 
     private void initFactory() {

@@ -19,10 +19,10 @@ public class Snowman extends Avatar{
     @Override
     public void setImg(){
         if(moveBehavior instanceof NoWalk){
-            this.img = PRESET.PRESET3.getImage(5);
+            this.img = PRESET.PRESET3.getImage(1);
         }
         else{
-            this.img = PRESET.PRESET3.getImage(6);            
+            this.img = PRESET.PRESET3.getImage(3);            
         }
     }
         

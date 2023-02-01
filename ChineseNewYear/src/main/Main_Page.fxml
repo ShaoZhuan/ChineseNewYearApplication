@@ -30,6 +30,7 @@
             </ImageView>
             <ImageView fx:id="person" fitHeight="300.0" layoutX="500.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
             <ImageView fx:id="olaf" fitHeight="269.0" fitWidth="270.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <ImageView fx:id="olaf_copy" fitHeight="269.0" fitWidth="270.0" layoutX="5.0" layoutY="250.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
             <Circle fx:id="circle1" fill="#fafafa00" layoutX="361.0" layoutY="319.0" radius="5.0" stroke="#ffffff00" strokeType="INSIDE" />
             <Circle fx:id="circle2" fill="#ffffff00" layoutX="371.0" layoutY="261.0" radius="5.0" stroke="#ffffff00" strokeType="INSIDE" />
             <Circle fx:id="circle3" fill="#ffffff00" layoutX="454.0" layoutY="261.0" radius="5.0" stroke="#ffffff00" strokeType="INSIDE" />
@@ -46,7 +47,7 @@
             <Button id="b2" fx:id="b2" layoutX="186" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="Preset 2" />
             <Button id="b3" fx:id="b3" layoutX="357" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="Preset 3" />
             <Button id="b4" fx:id="b4" layoutX="528" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="Light Animation" />
-            <Button id="b5" fx:id="b5" layoutX="699" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="Olaf Animation" />
+            <Button id="b5" fx:id="b5" layoutX="699" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="CNY Animation" />
             <Button id="b6" fx:id="b6" layoutX="870" layoutY="15.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="141" text="Clear Preset" />
          </children>
       </AnchorPane>

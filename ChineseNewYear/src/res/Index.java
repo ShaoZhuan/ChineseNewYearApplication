@@ -51,6 +51,7 @@ public class Index {
                 
                 imageArray.add(personImage);
                 imageArray.add(standImage);
+                imageArray.add(standImage);
                 imageArray.add(walkImage);
                 
                 this.color = Color.web("#3A5F0B", 0.5);
