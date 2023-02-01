@@ -228,7 +228,7 @@ public class Main_PageController implements Initializable {
         manager = AchievementSystem.getInstance();
 
         //create list of achievement
-        Achievement achievement1 = new Achievement("Achievement1", "You got the light blink twice and rabbit running");
+        Achievement achievement1 = new Achievement("Achievement1", "You got the light blink and rabbit running");
         Achievement achievement2 = new Achievement("Achievement2", "You got the fire crackers on!!!");
         Achievement achievement3 = new Achievement("Achievement3", "恭喜发财！！");
 
