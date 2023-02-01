@@ -13,9 +13,9 @@ import Factory.BackgroundCreator;
 import SingletonObserver.Achievement;
 import SingletonObserver.AchievementSystem;
 import SingletonObserver.PopupController;
-import Strategy.Santa;
-import Strategy.Reindeer;
-import Strategy.Snowman;
+import Strategy.NewYearScroll;
+import Strategy.FireCracker;
+import Strategy.Rabbit;
 import Strategy.Avatar;
 import java.net.URL;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class Main_PageController implements Initializable {
     @FXML
     private Button b1, b2, b3, b4, b5, b6;
     @FXML
-    private ImageView singa, olaf, person, olaf_copy;
+    private ImageView singa, animation, person, animation_copy;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
@@ -62,7 +62,7 @@ public class Main_PageController implements Initializable {
 
     private LightAnimation lightAnimation;
     private NewYearCreator background, lion;
-    private Avatar reindeer, santa, snowman, reindeer1, santa1, snowman1;
+    private Avatar FireCracker, NewYearScroll, Rabbit, FireCracker1, NewYearScroll1, Rabbit1;
     private boolean standing;
     private AchievementSystem manager;
 
@@ -114,28 +114,28 @@ public class Main_PageController implements Initializable {
         standing = !standing;
         switch (preset) {
             case PRESET1:
-                reindeer.toggle(standing);
-                reindeer.setImg();
-                reindeer.performMove();
-                reindeer1.toggle(standing);
-                reindeer1.setImg();
-                reindeer1.performMove();
+                FireCracker.toggle(standing);
+                FireCracker.setImg();
+                FireCracker.performMove();
+                FireCracker1.toggle(standing);
+                FireCracker1.setImg();
+                FireCracker1.performMove();
                 break;
             case PRESET2:
-                santa.toggle(standing);
-                santa.setImg();
-                santa.performMove();
-                santa1.toggle(standing);
-                santa1.setImg();
-                santa1.performMove();
+                NewYearScroll.toggle(standing);
+                NewYearScroll.setImg();
+                NewYearScroll.performMove();
+                NewYearScroll1.toggle(standing);
+                NewYearScroll1.setImg();
+                NewYearScroll1.performMove();
                 break;
             case PRESET3:
-                snowman.toggle(standing);
-                snowman.setImg();
-                snowman.performMove();
-                snowman1.toggle(standing);
-                snowman1.setImg();
-                snowman1.performMove();
+                Rabbit.toggle(standing);
+                Rabbit.setImg();
+                Rabbit.performMove();
+                Rabbit1.toggle(standing);
+                Rabbit1.setImg();
+                Rabbit1.performMove();
             default:
         }
 
@@ -181,8 +181,8 @@ public class Main_PageController implements Initializable {
         //Add element/component of the imageView into the array
         templateImage = new ArrayList<>();
         templateImage.add(person);
-        templateImage.add(olaf);
-        templateImage.add(olaf_copy);
+        templateImage.add(animation);
+        templateImage.add(animation_copy);
 
         //bind visibility of the button
         b4.visibleProperty().bind(b6.visibleProperty());
@@ -214,12 +214,12 @@ public class Main_PageController implements Initializable {
     }
 
     private void initStrategy() {
-        reindeer = new Reindeer(olaf);
-        santa = new Santa(olaf);
-        snowman = new Snowman(olaf);
-        reindeer1 = new Reindeer(olaf_copy);
-        santa1 = new Santa(olaf_copy);
-        snowman1 = new Snowman(olaf_copy);
+        FireCracker = new FireCracker(animation);
+        NewYearScroll = new NewYearScroll(animation);
+        Rabbit = new Rabbit(animation);
+        FireCracker1 = new FireCracker(animation_copy);
+        NewYearScroll1 = new NewYearScroll(animation_copy);
+        Rabbit1 = new Rabbit(animation_copy);
     }
 
     private void initFactory() {

@@ -10,9 +10,9 @@ import javafx.scene.image.ImageView;
 import res.Index.*;
 
 
-public class Snowman extends Avatar{
+public class Rabbit extends Avatar{
     
-    public Snowman(ImageView iv) {
+    public Rabbit(ImageView iv) {
         this.iv = iv;
     }
     

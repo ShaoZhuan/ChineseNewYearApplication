@@ -3,9 +3,9 @@ package Strategy;
 import javafx.scene.image.ImageView;
 import res.Index.*;
 
-public class Reindeer extends Avatar {
+public class FireCracker extends Avatar {
     
-    public Reindeer(ImageView iv) {
+    public FireCracker(ImageView iv) {
         this.iv = iv;
     }
     

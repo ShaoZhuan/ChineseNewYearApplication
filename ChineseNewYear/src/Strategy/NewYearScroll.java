@@ -4,9 +4,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import res.Index.*;
 
-public class Santa extends Avatar {
+public class NewYearScroll extends Avatar {
     
-    public Santa(ImageView iv) {
+    public NewYearScroll(ImageView iv) {
         this.iv = iv;
         
     }
