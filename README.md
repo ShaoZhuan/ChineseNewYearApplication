@@ -1,1 +1,1 @@
-# ChineseNewYearApplication
+# Small ChineseNewYearApplication
