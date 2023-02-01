@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import res.Index.*;
+
 public class BackgroundOne extends NewYearProduct{
     private String id;
     public BackgroundOne(String id){

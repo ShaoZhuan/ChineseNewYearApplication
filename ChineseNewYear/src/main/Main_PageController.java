@@ -242,7 +242,8 @@ public class Main_PageController implements Initializable {
     }
 
     private void checkAchievements() {
-        if (preset == PRESET.PRESET3 && !standing && lightAnimation.currentState() instanceof LightBlink2State) {
+        if (preset == PRESET.PRESET3 && !standing && lightAnimation.currentState()
+                instanceof LightBlink2State) {
             manager.getAchievement("Achievement1").unlock();
         }
         if (preset == PRESET.PRESET1 && !standing) {

@@ -22,7 +22,8 @@ public class PopupController implements Observer {
     @Override
     public void update(Achievement achievement) {
         try {
-            Label messageLabel = new Label("Achievement Unlocked: " + achievement.getName() + " - " + achievement.getDescription());
+            Label messageLabel = new Label("Achievement Unlocked: " + 
+                    achievement.getName() + " - " + achievement.getDescription());
             Button closeButton = new Button("Close");
             closeButton.setOnAction(event -> {
                 Stage stage = (Stage) closeButton.getScene().getWindow();
