@@ -21,7 +21,7 @@
             <RadioButton id="rbg1" fx:id="rbg1" layoutX="18.0" layoutY="40.0" mnemonicParsing="false" onAction="#changeBG" text="Background 1" />
             <RadioButton id="rbg2" fx:id="rbg2" layoutX="18.0" layoutY="65.0" mnemonicParsing="false" onAction="#changeBG" text="Background 2" />
             <RadioButton id="rbg3" fx:id="rbg3" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" onAction="#changeBG" text="Background 3" />
-            <Label layoutX="18.0" layoutY="124.0" prefHeight="17.0" prefWidth="96.0" text="Christmas Tree" />
+            <Label layoutX="18.0" layoutY="124.0" prefHeight="17.0" prefWidth="96.0" text="Lion" />
             <RadioButton id="rtr1" fx:id="rtr1" layoutX="18.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeTr" text="Lion 1" />
             <RadioButton id="rtr2" fx:id="rtr2" layoutX="18.0" layoutY="176.0" mnemonicParsing="false" onAction="#changeTr" text="Lion 2" />
          </children></AnchorPane>
