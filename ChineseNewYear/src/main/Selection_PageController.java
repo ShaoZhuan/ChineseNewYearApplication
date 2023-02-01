@@ -72,8 +72,6 @@ public class Selection_PageController implements Initializable {
                 break;
             case "rtr2":
                 lion = LION.LION2;
-                System.out.println(LION.LION2);
-                System.out.println(lion);
                 singa.setImage(lion.getLionImage());
                 break;
             default:

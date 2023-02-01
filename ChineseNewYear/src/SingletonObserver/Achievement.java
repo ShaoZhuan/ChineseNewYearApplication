@@ -4,10 +4,7 @@
  */
 package SingletonObserver;
 
-/**
- *
- * @author hng
- */
+
 public class Achievement {
     private String name;
     private String description;

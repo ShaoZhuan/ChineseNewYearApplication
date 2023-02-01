@@ -10,10 +10,6 @@ import javafx.animation.FillTransition;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
-/**
- *
- * @author FiQa
- */
 public class LightBlinkState implements State{
     
     Circle circle;

@@ -4,10 +4,6 @@
  */
 package SingletonObserver;
 
-/**
- *
- * @author hng
- */
 public interface Observer {
     void update(Achievement achievement);
 }

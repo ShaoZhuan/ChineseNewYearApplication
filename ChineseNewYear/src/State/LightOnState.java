@@ -9,10 +9,6 @@ import javafx.animation.FillTransition;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-/**
- *
- * @author FiQa
- */
 public class LightOnState implements State{
     
     Circle circle;

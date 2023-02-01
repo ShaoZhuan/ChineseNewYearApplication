@@ -17,10 +17,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-/**
- *
- * @author hng
- */
 public class PopupController implements Observer {
 
     @Override

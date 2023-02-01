@@ -53,8 +53,6 @@ public class Main_PageController implements Initializable {
     private ImageView singa, animation, person, animation_copy;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
-    @FXML
-    private MenuItem factory, fmusic, fskip, close;
 
     private Template tmp;
     private ArrayList<ImageView> templateImage;
@@ -67,7 +65,7 @@ public class Main_PageController implements Initializable {
     private AchievementSystem manager;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {          
+    public void initialize(URL location, ResourceBundle resources) {
         initTemplate();
         initState();
         initStrategy();
@@ -83,7 +81,7 @@ public class Main_PageController implements Initializable {
             case "b1":
                 preset = PRESET.PRESET1;
                 tmp.setPresetImage(preset);
-                standing = true;                
+                standing = true;
                 break;
             case "b2":
                 preset = PRESET.PRESET2;
@@ -105,7 +103,6 @@ public class Main_PageController implements Initializable {
                 tmp.clearPreset();
                 break;
             default:
-            //throw new AssertionError();
         }
         checkAchievements();
     }
@@ -195,7 +192,6 @@ public class Main_PageController implements Initializable {
 
     private void initState() {
         lightAnimation = new LightAnimation(circle1);
-        //Bagi semua circle animation sama
         circle2.fillProperty().bind(circle1.fillProperty());
         circle3.fillProperty().bind(circle1.fillProperty());
         circle4.fillProperty().bind(circle1.fillProperty());
@@ -203,9 +199,7 @@ public class Main_PageController implements Initializable {
         circle6.fillProperty().bind(circle1.fillProperty());
         circle7.fillProperty().bind(circle1.fillProperty());
         circle8.fillProperty().bind(circle1.fillProperty());
-       
-        
-        //Bagi semua visible or invisible
+
         circle2.visibleProperty().bind(circle1.visibleProperty());
         circle3.visibleProperty().bind(circle1.visibleProperty());
         circle4.visibleProperty().bind(circle1.visibleProperty());
@@ -213,7 +207,7 @@ public class Main_PageController implements Initializable {
         circle6.visibleProperty().bind(circle1.visibleProperty());
         circle7.visibleProperty().bind(circle1.visibleProperty());
         circle8.visibleProperty().bind(circle1.visibleProperty());
-        
+
     }
 
     private void initStrategy() {
@@ -232,32 +226,32 @@ public class Main_PageController implements Initializable {
 
     private void initAchievement() {
         manager = AchievementSystem.getInstance();
-        
+
         //create list of achievement
         Achievement achievement1 = new Achievement("Achievement1", "You got the light blink twice and rabbit running");
         Achievement achievement2 = new Achievement("Achievement2", "You got the fire crackers on!!!");
         Achievement achievement3 = new Achievement("Achievement3", "恭喜发财！！");
-        
-        
+
         manager.addAchievement(achievement1);
         manager.addAchievement(achievement2);
-        
+        manager.addAchievement(achievement3);
+
         PopupController popup = new PopupController();
         manager.registerObserver(popup);
-                
+
     }
-    
-    private void checkAchievements(){
-        if(preset==PRESET.PRESET3 && !standing && lightAnimation.currentState() instanceof LightBlink2State){
+
+    private void checkAchievements() {
+        if (preset == PRESET.PRESET3 && !standing && lightAnimation.currentState() instanceof LightBlink2State) {
             manager.getAchievement("Achievement1").unlock();
         }
-        if(preset==PRESET.PRESET1 && !standing){
+        if (preset == PRESET.PRESET1 && !standing) {
             manager.getAchievement("Achievement2").unlock();
         }
-        if(preset==PRESET.PRESET2 && !standing){
+        if (preset == PRESET.PRESET2 && !standing) {
             manager.getAchievement("Achievement3").unlock();
-        } 
-        
+        }
+
     }
 
 }

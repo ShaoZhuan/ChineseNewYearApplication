@@ -9,11 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author hng
- */
-//Singleton Class
+
 public class AchievementSystem {
     private static AchievementSystem instance;
 

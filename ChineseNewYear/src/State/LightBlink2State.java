@@ -10,10 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
-/**
- *
- * @author FiQa
- */
+
 public class LightBlink2State implements State{
     
     Circle circle;
