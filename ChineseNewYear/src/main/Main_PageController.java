@@ -203,6 +203,8 @@ public class Main_PageController implements Initializable {
         circle6.fillProperty().bind(circle1.fillProperty());
         circle7.fillProperty().bind(circle1.fillProperty());
         circle8.fillProperty().bind(circle1.fillProperty());
+       
+        
         //Bagi semua visible or invisible
         circle2.visibleProperty().bind(circle1.visibleProperty());
         circle3.visibleProperty().bind(circle1.visibleProperty());
@@ -211,6 +213,7 @@ public class Main_PageController implements Initializable {
         circle6.visibleProperty().bind(circle1.visibleProperty());
         circle7.visibleProperty().bind(circle1.visibleProperty());
         circle8.visibleProperty().bind(circle1.visibleProperty());
+        
     }
 
     private void initStrategy() {
